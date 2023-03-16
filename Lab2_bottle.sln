@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Lab2_bottle", "Lab2_bottle\Lab2_bottle.pyproj", "{08151BDB-DB21-418A-985C-C537C9021CD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08151BDB-DB21-418A-985C-C537C9021CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08151BDB-DB21-418A-985C-C537C9021CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08151BDB-DB21-418A-985C-C537C9021CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08151BDB-DB21-418A-985C-C537C9021CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA1BFE83-5D96-4281-BACB-3731F04D7D26}
+	EndGlobalSection
+EndGlobal
