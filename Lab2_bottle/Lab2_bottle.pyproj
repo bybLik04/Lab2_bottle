@@ -19,6 +19,7 @@
     <Name>Lab2_bottle</Name>
     <RootNamespace>Lab2_bottle</RootNamespace>
     <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserPort>443</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
