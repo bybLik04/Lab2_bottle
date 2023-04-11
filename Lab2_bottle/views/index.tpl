@@ -33,7 +33,7 @@
 <form action="/home" method="post">
         <p><input type="text" size="50" name="USERNAME" placeholder="Your name"></p>
         <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
-        <p><textarea rows="4" cols="50" name="QUEST" placeholder="Your question"></textarea></p> 
+        <p><textarea rows="4" cols="50" name="QUEST" placeholder="Your question" style="resize:none;"></textarea></p> 
         <p style="font-size: 13pt">{{ msg }}</p>
         <p><input class="btn btn-default" type="submit" value="Send"></p>
         
