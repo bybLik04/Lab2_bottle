@@ -1,5 +1,5 @@
 import re
-from bottle import post, request
+from bottle import post, request, template
 from datetime import datetime
 
 @post('/home', method='post')
@@ -8,12 +8,14 @@ def my_form():
     username = request.forms.get('USERNAME')
 
     if not mail or not username:
-        return "Please fill in all fields"
+        error_msg = "Please fill in all fields"
+        return template("index.tpl", msg=error_msg, year=datetime.now().year)
 
     email_pattern = r'^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-
     if not re.match(email_pattern, mail):
-        return "Invalid email address"
+        error_msg =  "Invalid email address"
+        return template("index.tpl", msg=error_msg, year=datetime.now().year)
 
     access_date = datetime.now().strftime("%Y-%m-%d")
-    return "Thanks, {}! The answer will be sent to the mail {}. Access Date: {}".format(username, mail, access_date)
+    success_msg =  f"Thanks, {username}! The answer will be sent to the mail {mail}. Access Date: {access_date}"
+    return template("index.tpl", msg=success_msg, year=datetime.now().year)
