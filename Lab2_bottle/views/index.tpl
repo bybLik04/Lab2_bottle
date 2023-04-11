@@ -17,7 +17,7 @@
         </p>
         <p><a class="btn btn-default" href="http://bottlepy.org/docs/dev/index.html">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4"> 
         <h2>Get more libraries</h2>
         <p>The Python Package Index is a repository of software for the Python programming language.</p>
         <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
@@ -31,7 +31,9 @@
 
 <h3> Ask a Question </h3>
 <form action="/home" method="post">
+        <p><textarea rows="1" cols="50" name="USERNAME" placeholder="Your name"></textarea></p> 
         <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"></textarea></p> 
         <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
         <p><input class="btn btn-default" type="submit" value="Send"></p>
+        <p></p>
 </form>
