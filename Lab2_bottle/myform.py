@@ -22,6 +22,6 @@ def my_form():
 
     access_date = datetime.now().strftime("%Y-%m-%d")
     success_msg =  f"Thanks, {username}! The answer will be sent to the mail {mail}. Access Date: {access_date}"
-    questions[mail] = question
+    questions[mail] = [username, question]
     pdb.set_trace()
     return template("index.tpl", msg=success_msg, year=datetime.now().year)
