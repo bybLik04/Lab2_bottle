@@ -1,11 +1,15 @@
 import re
 from bottle import post, request, template
 from datetime import datetime
+import pdb
+
+questions ={} #создаем словарь
 
 @post('/home', method='post')
 def my_form():
     mail = request.forms.get('ADRESS')
     username = request.forms.get('USERNAME')
+    question = request.forms.get('QUEST') 
 
     if not mail or not username:
         error_msg = "Please fill in all fields"
@@ -18,4 +22,6 @@ def my_form():
 
     access_date = datetime.now().strftime("%Y-%m-%d")
     success_msg =  f"Thanks, {username}! The answer will be sent to the mail {mail}. Access Date: {access_date}"
+    questions[mail] = question
+    pdb.set_trace()
     return template("index.tpl", msg=success_msg, year=datetime.now().year)
