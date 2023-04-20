@@ -27,13 +27,14 @@ def my_form():
 
     access_date = datetime.now().strftime("%Y-%m-%d")
     if mail in questions:
-        if question not in questions[mail]:
+        questions[mail][0] = username
+        if question not in questions[mail][1:]:
             questions[mail].append(question)
         else:
             error_msg = "This question has already benn asked by this user"
             return template("index.tpl", msg=error_msg, year=datetime.now().year)
     else:
-        questions[mail] = [question]
+        questions[mail] = [username, question]
 
     with open('questions.json', 'w') as json_file:
         json.dump(questions, json_file, indent=4)
