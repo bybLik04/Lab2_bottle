@@ -42,5 +42,5 @@ def my_form():
     return template("index.tpl", msg=success_msg, year=datetime.now().year)   # возвращаем шаблон с сообщением
 
 def mail_valid(email): # функция проверки почты соответсвию паттерну
-    email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' # паттерн для проверки валидности email адреса
+    email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$' # паттерн для проверки валидности email адреса
     return re.match(email_pattern, email)
