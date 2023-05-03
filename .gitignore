@@ -9,6 +9,7 @@ env3/
 env4/
 Lab2_bottle/.pyproj
 .pyproj
+*.pyproj
 # User-specific files
 *.rsuser
 *.suo
